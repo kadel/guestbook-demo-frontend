@@ -1,0 +1,7 @@
+name: frontend
+containers:
+  - image: tomaskral/kedge-demo-frontend:v1
+services:
+  - type: LoadBalancer
+    ports:
+    - port: 8080

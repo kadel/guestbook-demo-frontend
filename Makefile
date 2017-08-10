@@ -8,3 +8,6 @@ image:
 
 push:
 	docker push $(NAME):$(VERSION)
+
+deploy:
+	kedge apply -f Kedge/
