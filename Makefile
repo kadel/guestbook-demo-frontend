@@ -1,4 +1,4 @@
-NAME=tomaskral/kedge-demo-frontend
+NAME=quay.io/tomkral/guestbook-demo-frontend
 VERSION=v1
 
 all: image push
