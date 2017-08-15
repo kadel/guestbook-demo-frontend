@@ -1,4 +1,4 @@
-FROM tomaskral/nonroot-nginx
+FROM quay.io/tomkral/nonroot-nginx:latest
 
 COPY nginx/default.d /etc/nginx/default.d
 
