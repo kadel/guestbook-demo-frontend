@@ -1,6 +1,6 @@
 name: frontend
 containers:
-  - image: tomaskral/kedge-demo-frontend:v1
+  - image: tomaskral/guestbook-demo-frontend:v1
 services:
   - type: LoadBalancer
     ports:
