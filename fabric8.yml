@@ -1,0 +1,11 @@
+---
+buildName: "guestbook-demo-frontend"
+links:
+  Git: "git@github.com:kadel/guestbook-demo-frontend.git"
+  Job: "http://192.168.42.179:30149/job/guestbook-demo-frontend"
+  Production: "http://10.0.0.125:80/kubernetes/pods?namespace=default-production"
+  Staging: "http://10.0.0.125:80/kubernetes/pods?namespace=default-staging"
+environments:
+  Staging: "default-staging"
+  Production: "default-production"
+useLocalFlow: true
