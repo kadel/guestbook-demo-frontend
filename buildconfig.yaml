@@ -1,0 +1,17 @@
+kind: "BuildConfig"
+apiVersion: "v1"
+metadata:
+  name: "first"
+spec:
+  source:
+    git:
+      uri: "https://github.com/kadel/guestbook-demo-frontend"
+  strategy:
+    jenkinsPipelineStrategy:
+      jenkinsfilePath: Jenkinsfile
+  triggers:
+    - type: "GitHub"
+      github:
+        secret: secret
+
+      %  
