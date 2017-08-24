@@ -1,7 +1,7 @@
 kind: "BuildConfig"
 apiVersion: "v1"
 metadata:
-  name: "first"
+  name: "guestbook-demo-frontend"
 spec:
   source:
     git:
@@ -14,4 +14,3 @@ spec:
       github:
         secret: secret
 
-      %  
