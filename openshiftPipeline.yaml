@@ -1,7 +1,7 @@
 kind: "BuildConfig"
 apiVersion: "v1"
 metadata:
-  name: "guestbook-demo-frontend"
+  name: "guestbook-frontend-pipline"
 spec:
   source:
     git:
