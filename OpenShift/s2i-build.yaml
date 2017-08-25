@@ -1,0 +1,37 @@
+# kind: ImageStream
+# apiVersion: v1
+# metadata:
+#   name: guestbook-demo-frontend
+# spec:
+#   tags:
+#     - name: latest
+
+# ---
+
+kind: BuildConfig
+apiVersion: v1
+metadata:
+  name: guestbook-frontend
+spec:
+  source:
+    git:
+      uri: https://github.com/kadel/guestbook-demo-frontend
+  strategy:
+    type: Source
+    strategy:
+      dockerStrategy:
+        dockerfilePath: Dockerfile
+  # output: 
+  #   to:
+  #     kind: ImageStreamTag
+  #     name: guestbook-demo-frontend:latest
+  output:
+    to:
+      kind: "DockerImage"
+      name: "docker.io/tomaskral/guestbook-demo-frontend:latest"
+    pushSecret:
+      name: "pushsecrets"
+  triggers:
+    - type: GitHub
+      github:
+        secret: secret
