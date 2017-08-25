@@ -1,6 +1,8 @@
 name: frontend
 containers:
-  - image: quay.io/tomkral/guestbook-demo-frontend:v1
+  - image: tomaskral/guestbook-demo-frontend:latest
+imagePullPolicy: Always
+
 services:
   - type: LoadBalancer
     ports:
