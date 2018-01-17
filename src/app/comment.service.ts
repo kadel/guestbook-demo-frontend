@@ -6,6 +6,7 @@ import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
+import { environment } from '../environments/environment';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -14,7 +15,7 @@ const httpOptions = {
 @Injectable()
 export class CommentService {
   
-  private commentsUrl = 'http://backend.192.168.99.100.nip.io/api/comments';
+  private commentsUrl = environment.commentsUrl;
   
   constructor(
     private http: HttpClient) { }
