@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  commentsUrl: "http://backend.192.168.99.100.nip.io/api/comments"  
+  commentsUrl: "/api/comments"  
 };

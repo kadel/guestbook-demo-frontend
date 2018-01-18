@@ -1,0 +1,8 @@
+
+:2015 {
+    root ./dist
+    tls off
+    log stdout
+
+    proxy /api/comments {%COMMENTS_API%}
+}

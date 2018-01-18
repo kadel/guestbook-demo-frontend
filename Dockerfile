@@ -16,6 +16,7 @@ RUN curl -L -o /caddy.tar.gz https://github.com/mholt/caddy/releases/download/v0
 RUN tar -xzf /caddy.tar.gz caddy
 
 WORKDIR /app
-COPY --from=0 /app/dist /app 
+COPY Caddyfile /app/
+COPY --from=0 /app/dist /app/dist
 
 ENTRYPOINT [ "/caddy" ]
