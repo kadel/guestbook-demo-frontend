@@ -19,4 +19,7 @@ WORKDIR /app
 COPY Caddyfile /app/
 COPY --from=0 /app/dist /app/dist
 
+# COMMENTS backend api server
+ENV COMMENTS_API = "http://guestbook-backend:3000"
+
 ENTRYPOINT [ "/caddy" ]

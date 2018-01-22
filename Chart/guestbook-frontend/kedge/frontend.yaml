@@ -1,0 +1,14 @@
+name: guestbook-frontend
+
+deployments:
+- containers:
+    - image: tomaskral/guestbook-frontend@[[ IMAGE_DIGEST ]]
+      env:
+        - name: COMMENTS_API
+          value: http://guestbook-backend:3000
+
+services:
+- ports:
+   - port: 2015
+     endpoint: guestbook.minikube.local
+

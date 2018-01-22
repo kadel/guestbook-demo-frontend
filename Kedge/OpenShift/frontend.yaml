@@ -1,17 +1,19 @@
 name: guestbook-frontend
 
-deployments:
+deploymentConfigs:
 - containers:
-    - image: tomaskral/guestbook-frontend@[[ IMAGE_DIGEST ]]
+    - image: tomaskral/guestbook-frontend@sha256:9d797af0f1772096b6405e661f9886aedcb3a7fdfffb1e89dc1a4556cab17a1d
       env:
         - name: COMMENTS_API
           value: http://guestbook-backend:3000
 
 services:
-- portMappings:
-    - 2015
+- ports:
+   - port: 2015
 
 routes:
 - to:
     kind: Service
     name: guestbook-frontend
+
+
