@@ -12,7 +12,6 @@ services:
     - 2015
 
 routes:
-- name: guestbook-frontend
-  to:
+- to:
     kind: Service
     name: guestbook-frontend
